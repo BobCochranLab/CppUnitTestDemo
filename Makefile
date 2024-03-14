@@ -3,20 +3,9 @@ DEBUG=-g -DDEBUG
 CPPFLAGS += -I$(CPPUTEST_HOME)/include
 LD_LIBRARIES = -L$(CPPUTEST_HOME)/lib -lCppUTest -lCppUTestExt
 
-all: HelloWorld CppUtestDemoTestRunner CppUtestDemoMono
+all: CppUtestDemoTestRunner CppUtestDemoMono
 
-default: HelloWorld CppUtestDemoTestRunner CppUtestDemoMono
-
-assy: HelloWorld.s
-
-HelloWorld.o: HelloWorld.cpp
-	$(CC) -c HelloWorld.cpp -o HelloWorld.o
-
-HelloWorld: HelloWorld.o
-	$(CC) HelloWorld.o -o HelloWorld
-
-HelloWorld.s: HelloWorld.cpp
-	$(CC) -S HelloWorld.cpp -S -o HelloWorld.s
+default: CppUtestDemoTestRunner CppUtestDemoMono
 
 # This one doesn't need $(CPPFLAGS) because it doesn't include any .h files
 # in the CppUTest include subdirectory, but I have it for consistency.
@@ -57,8 +46,6 @@ CppUtestDemoMono: CppUtestDemoMono.o
 	$(CC) $(DEBUG) CppUtestDemoMono.o $(LD_LIBRARIES) -o CppUtestDemoMono
 
 clean:
-	rm -f HelloWorld.o
-	rm -f HelloWorld
 	rm -f CppUtestDemo.o
 	rm -f CppUtestDemoTest.o
 	rm -f CppUtestDemoTestRunner.o
