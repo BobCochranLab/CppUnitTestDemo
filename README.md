@@ -1,6 +1,6 @@
 # CppUnitTestDemo
 
-This repository is intended to help software engineers quickly see how to combine a C++ unit test infrastructure, a debugging setup, and flexibility to build and debug at either the linux command or from within VS Code.
+This repository is intended to help software engineers quickly see how to combine a C++ unit test infrastructure, a debugging setup, and flexibility to build, execute and debug at either the linux command line or from within VS Code.
 
 If you are developing under Windows Subsystem for Linux (WSL), you should be able to clone this repository and soon be building, running and debugging the example code that combines a simple program with unit tests.
 
