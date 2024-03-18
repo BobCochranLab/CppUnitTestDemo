@@ -2,6 +2,15 @@
 
 This repository is intended to help software engineers quickly see how to combine a simple C++ program with a unit test infrastructure, a debugging setup, and flexibility to build/execute/debug at either the linux command line or from within VS Code.
 
+The goals for this example are:
+1)  To show how to create unit test code for your project's source code.
+2)  To provide a setup that lets you build and debug this and other Cpputest projects, both with 'make' and gdb at the linux command line, and with VS Code.
+3)  To provide the following setup files for the .vscode directory so you can quickly be able to build, execute and debug inside VS Code on linux:
+      - Makefile
+      - launch.json
+      - settings.json
+      - tasks.json
+
 If you are developing under Windows Subsystem for Linux (WSL), you should be able to clone this repository and soon be building, running and debugging the example code that combines a simple program with unit tests.
 
 The Makefile comments explain some of the issues you might encounter.  So please read the Makefile!
@@ -20,11 +29,3 @@ Don't forget to run 'source ~/.bashrc' after adding the new definition for CPPUT
 Now you can run 'env | grep -i cpp' at the linux command line and see that CPPUTEST_HOME is defined.  You should get a line of output that looks like this:
       CPPUTEST_HOME=/home/bob/cpputest
 
-The goals for this example are:
-1)  To show how to create unit test code for your project's source code.
-2)  To be able to build and debug Cpputest projects, both with 'make' and gdb at the linux command line, and with VS Code.
-3)  To provide the following setup files for the .vscode directory so you can quickly be able to build, execute and debug inside VS Code on linux:
-      - Makefile
-      - launch.json
-      - settings.json
-      - tasks.json
