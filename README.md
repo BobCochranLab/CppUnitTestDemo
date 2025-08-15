@@ -19,7 +19,7 @@ The first thing you will likely wonder when reading the Makefile is, "where is C
 
 To install and use CppUTest on linux, you can use the web site's instructions for installing it.  It is available for public download, available here: https://cpputest.github.io/
 
-Afer you install CppUTest, you will want to define CPPUTEST_HOME in your ~/.bashrc file.
+After you install CppUTest, you will want to define CPPUTEST_HOME in your ~/.bashrc file.
 
 The line you will add should look like something this (make sure the path is where you installed the cpputest framework):
       export CPPUTEST_HOME=/home/<username>/cpputest
